@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <mat-nav-list>
+    <mat-list-item
+      *ngFor="let menu of listMenu"
+      routerLinkActive="list-item-active"
+      [routerLink]="menu.path"
+    >
+      <mat-icon matListItemIcon>chevron_right</mat-icon>
+      <a>{{ menu.name }}</a>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

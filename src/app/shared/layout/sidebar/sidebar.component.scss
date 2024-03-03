@@ -1,0 +1,28 @@
+.sidebar {
+  mat-list-item {
+    mat-icon {
+      margin-right: 10px;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &.list-item-active {
+      background-color: #e33737;
+
+      mat-icon {
+        color: #fff;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &:focus::before {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$primary-palette: (
+  50: #feebee,
+  100: #fecdd2,
+  200: #ed999b,
+  300: #e37274,
+  400: #ed5252,
+  500: #f24138,
+  600: #e33737,
+  700: #d12d31,
+  800: #c4262a,
+  900: #b51a1e,
+  A100: #e33737,
+  A200: #e33737,
+  A400: #e33737,
+  A700: #e33737,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  ),
+);
+
+$my-primary: mat.define-palette($primary-palette, 600);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$custom-typography: mat.define-typography-config(
+  $font-family: "'Montserrat', sans-serif",
+);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+    typography: $custom-typography,
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($my-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}

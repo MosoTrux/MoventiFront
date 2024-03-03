@@ -1,0 +1,29 @@
+.data-table {
+  &__status {
+    border-radius: 0.4rem;
+    &--active {
+      color: #168535;
+      background-color: #e3ffd6;
+      font-weight: 500;
+    }
+
+    &--draft {
+      color: #6b7a99;
+      background-color: #e8e8e8;
+      font-weight: 500;
+    }
+  }
+
+  &__element-row:hover {
+    background: whitesmoke;
+  }
+}
+
+th[class*="mat-column-"],
+td[class*="mat-column-"] {
+  font-size: 16px;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  cursor: pointer;
+}
